@@ -1,0 +1,16 @@
+{
+  "name": "t2-work-queues",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "worker": "node worker.js",
+    "new_task": "node new_task.js"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "amqplib": "^0.10.4"
+  }
+}
