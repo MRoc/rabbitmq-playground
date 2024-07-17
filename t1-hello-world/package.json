@@ -7,6 +7,7 @@
     "send": "node sender.js",
     "receive": "node receiver.js"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {

@@ -1,28 +1,25 @@
-var amqp = require("amqplib/callback_api");
+import amqp from "amqplib";
 
-amqp.connect("amqp://localhost", function (error0, connection) {
-  if (error0) {
-    throw error0;
-  }
-  connection.createChannel(function (error1, channel) {
-    if (error1) {
-      throw error1;
-    }
-    var queue = "hello";
+try {
+  const connection = await amqp.connect("amqp://localhost");
+  const channel = await connection.createChannel();
 
-    channel.assertQueue(queue, {
-      durable: false,
-    });
+  var queue = "hello";
 
-    console.log(" [*] Waiting for messages in %s. To exit press CTRL+C", queue);
-    channel.consume(
-      queue,
-      function (msg) {
-        console.log(" [x] Received %s", msg.content.toString());
-      },
-      {
-        noAck: true,
-      }
-    );
+  channel.assertQueue(queue, {
+    durable: false,
   });
-});
+
+  console.log(" [*] Waiting for messages in %s. To exit press CTRL+C", queue);
+  channel.consume(
+    queue,
+    function (msg) {
+      console.log(" [x] Received %s", msg.content.toString());
+    },
+    {
+      noAck: true,
+    }
+  );
+} catch (error) {
+  console.log(error);
+}
