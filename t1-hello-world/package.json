@@ -1,0 +1,15 @@
+{
+  "name": "t1-hello-world",
+  "version": "1.0.0",
+  "description": "https://www.rabbitmq.com/tutorials/tutorial-one-javascript",
+  "main": "index.js",
+  "scripts": {
+    "send": "node sender.js",
+    "receive": "node receiver.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.4"
+  }
+}
