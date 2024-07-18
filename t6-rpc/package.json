@@ -1,0 +1,16 @@
+{
+  "name": "t6-rpc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "node rpc_server.js",
+    "client": "node rpc_client.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "amqplib": "^0.10.4"
+  }
+}
