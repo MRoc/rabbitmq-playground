@@ -1,0 +1,16 @@
+{
+  "name": "t5-topics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "emit": "node emit.js",
+    "receive": "node receive.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "amqplib": "^0.10.4"
+  }
+}
