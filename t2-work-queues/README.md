@@ -4,11 +4,9 @@ This tutorial has two workers that consume messages round robin.
 
 https://www.rabbitmq.com/tutorials/tutorial-two-javascript
 
-```bash
-npm install amqplib
-```
 
-```
+```bash
+npm install
 docker run -d -p 15672:15672 -p 5672:5672 -p 5671:5671 --name rabbitmq-container rabbitmq:3
 npm run worker
 npm run worker

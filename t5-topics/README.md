@@ -5,10 +5,7 @@ This example shows how a receiver can listen to only topics and subtopics. This 
 https://www.rabbitmq.com/tutorials/tutorial-five-javascript
 
 ```bash
-npm install amqplib
-```
-
-```
+npm install
 docker run -d -p 15672:15672 -p 5672:5672 -p 5671:5671 --name rabbitmq-container rabbitmq:3
 npm run receive kernel.info
 npm run receive kernel.*
