@@ -1,0 +1,16 @@
+{
+  "name": "tx1-streams",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "send": "node send.js",
+    "receive": "node receive.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "rabbitmq-stream-js-client": "^0.4.0"
+  }
+}
